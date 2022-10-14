@@ -29,74 +29,73 @@ public class Main {
     }
 
     static LinkedHashMap<String, Integer> leeryNormalizarTexto(String path) {
-        LinkedHashMap<String, Integer> listaPalabras;
+        LinkedHashMap<String, Integer> listaPalabrasFinal;
 
         try (var br = new BufferedReader(new FileReader(path))) {
 
-            ArrayList<String> all_text = new ArrayList<>();
-            ArrayList<String> all_text_mod = new ArrayList<>();
+            ArrayList<String> listaPalabras = new ArrayList<>();
+            ArrayList<String> listaModificada = new ArrayList<>();
             String value;
-            listaPalabras = new LinkedHashMap<>();
-            StringBuilder final_text = new StringBuilder();
+            listaPalabrasFinal = new LinkedHashMap<>();
+            StringBuilder texto = new StringBuilder();
             while (br.ready()) {
                 value = br.readLine();
                 if (value != null) {
-                    final_text.append(value).append("\n");
-                    all_text.addAll(List.of(value.split(" ")));
+                    texto.append(value).append("\n");
+                    listaPalabras.addAll(List.of(value.split(" ")));
                 }
             }
+
             limpiarPantalla(1);
             System.out.println("*************");
             System.out.println("El texto es: ");
             System.out.println("*************");
             System.out.println("-----------------------------------------------------------------------------------------------------");
-            System.out.println(final_text);
+            System.out.println(texto);
             System.out.println("-----------------------------------------------------------------------------------------------------");
             limpiarPantalla(10);
 
-            String normalized_element;
-            for (String element : all_text) {
-                normalized_element = normalizar(element);
-                normalized_element = eliminarSimbolos(normalized_element);
-                if (normalized_element.length() >= 3 && permitido(normalized_element)) {
-                    all_text_mod.add(normalized_element);
+            String textoNormalizado;
+            for (String element : listaPalabras) {
+                textoNormalizado = eliminarSimbolos(normalizar(element));
+                if (textoNormalizado.length() >= 3 && permitido(textoNormalizado)) {
+                    listaModificada.add(textoNormalizado);
                 }
             }
 
             // Orden alfabetico de los elementos
-            Collections.sort(all_text_mod);
+            Collections.sort(listaModificada);
 
             // Permite guardar las palabras ordenadas alfabeticamente
-
-            for (String k : all_text_mod) {
-                listaPalabras.put(k, 0);
+            for (String k : listaModificada) {
+                listaPalabrasFinal.put(k, 0);
             }
 
-            // Creamos un HasSet a partir de las palabras que nos aparecen en la Lista Normalizada y guardada como nosotros deseamos
-            Set<String> diccionario_elementos = new HashSet<>(all_text_mod);
+            // Creamos un HashSet a partir de las palabras que nos aparecen en la Lista Normalizada y guardada como nosotros deseamos
+            Set<String> diccionario_elementos = new HashSet<>(listaModificada);
 
             for (String s : diccionario_elementos) {
                 // (Calculo de el numero de veces que aparece en el listado, elemento s)
-                int veces = Collections.frequency(all_text_mod, s);
-                // Guardamos la informacion en el HasMap() ordenado -> En esta variable se encuentran los datos que exportaremos a un archivo CSV
-                listaPalabras.put(s, veces);
+                int veces = Collections.frequency(listaModificada, s);
+                // Guardamos la informacion en el HashMap() ordenado -> En esta variable se encuentran los datos que exportaremos a un archivo CSV
+                listaPalabrasFinal.put(s, veces);
             }
             System.out.println("---------");
             System.out.println("Listado: ");
             System.out.println();
-            listaPalabras.forEach((k, v) -> System.out.println(k + " -> " + v));
+            listaPalabrasFinal.forEach((k, v) -> System.out.println(k + " -> " + v));
             System.out.println("---------");
             limpiarPantalla(14);
 
 
             System.out.println("<<----------------------------------------------------->>");
-            System.out.println("    Numero de Palabras diferentes: " + listaPalabras.size());
+            System.out.println("    Numero de Palabras diferentes: " + listaPalabrasFinal.size());
             System.out.println("<<----------------------------------------------------->>");
 
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        return listaPalabras;
+        return listaPalabrasFinal;
     }
 
     static public String normalizar(String text) {
