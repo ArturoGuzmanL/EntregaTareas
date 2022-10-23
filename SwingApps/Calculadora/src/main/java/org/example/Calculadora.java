@@ -151,31 +151,34 @@ public class Calculadora extends JFrame {
 
             case "Igual" -> {
 
-                listaNumerosCalculo.add(Float.valueOf(resultadoGrande.getText()));
-                float resultado = listaNumerosCalculo.get(0);
+                try {
+                    listaNumerosCalculo.add(Float.valueOf(resultadoGrande.getText()));
+                    float resultado = listaNumerosCalculo.get(0);
 
-                for (int i = 1; i<listaNumerosCalculo.size(); i++) {
+                    for (int i = 1; i < listaNumerosCalculo.size(); i++) {
 
-                    switch (listaOperacionesCalculo.get(i-1)) {
+                        switch (listaOperacionesCalculo.get(i - 1)) {
 
-                        case 1 -> resultado += listaNumerosCalculo.get(i);
-                        case 2 -> resultado -= listaNumerosCalculo.get(i);
-                        case 3 -> resultado = resultado * listaNumerosCalculo.get(i);
-                        case 4 -> resultado = resultado / listaNumerosCalculo.get(i);
-                        case 5 -> resultado = resultado % listaNumerosCalculo.get(i);
+                            case 1 -> resultado += listaNumerosCalculo.get(i);
+                            case 2 -> resultado -= listaNumerosCalculo.get(i);
+                            case 3 -> resultado = resultado * listaNumerosCalculo.get(i);
+                            case 4 -> resultado = resultado / listaNumerosCalculo.get(i);
+                            case 5 -> resultado = resultado % listaNumerosCalculo.get(i);
 
+                        }
                     }
+
+                    resultadoMiniNoHTML = "";
+                    resultadoMini.setText("");
+
+                    resultadoGrande.setText(String.valueOf(resultado));
+
+                    listaNumerosCalculo.clear();
+                    listaOperacionesCalculo.clear();
+                    reiniciar = true;
+                }catch (Exception ex) {
+                    ex.printStackTrace();
                 }
-
-                resultadoMiniNoHTML = "";
-                resultadoMini.setText("");
-
-                resultadoGrande.setText(String.valueOf(resultado));
-
-                listaNumerosCalculo.clear();
-                listaOperacionesCalculo.clear();
-                reiniciar = true;
-
             }
 
         }
