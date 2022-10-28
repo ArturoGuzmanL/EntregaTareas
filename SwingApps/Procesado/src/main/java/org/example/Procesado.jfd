@@ -94,6 +94,14 @@ new FormModel {
 					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "estiloAction", true ) )
 				} )
 				add( new FormComponent( "javax.swing.JButton" ) {
+					name: "capitalizacionButton"
+					"text": "Capitalizacion"
+					"foreground": sfield java.awt.Color white
+					"borderPainted": false
+					"contentAreaFilled": false
+					addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "capitalizacionAction", true ) )
+				} )
+				add( new FormComponent( "javax.swing.JButton" ) {
 					name: "acercaDeButton"
 					"text": "Acerca de"
 					"borderPainted": false

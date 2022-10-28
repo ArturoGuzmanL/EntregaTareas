@@ -39,7 +39,7 @@ public class Estilos extends JDialog {
 
     private void cancelAction(ActionEvent e) {
         // TODO add your code here
-        System.exit(0);
+        dispose();
     }
 
     private void textoStateChanger(ChangeEvent e) {

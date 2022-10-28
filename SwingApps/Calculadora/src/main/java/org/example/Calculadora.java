@@ -14,7 +14,7 @@ import java.security.Key;
 import java.util.ArrayList;
 
 /**
- * @author Arturo Guzmán Lucena
+ * @author Arturo, Carlos
  */
 public class Calculadora extends JFrame {
 
@@ -24,8 +24,6 @@ public class Calculadora extends JFrame {
                 Calculadora ventana = new Calculadora();
                 ventana.setSize(new Dimension(410, 680));
                 ventana.setMinimumSize(new Dimension(300, 590));
-
-
 
                 ventana.setVisible(true);
             }catch (Exception e) {
@@ -204,8 +202,6 @@ public class Calculadora extends JFrame {
         @Override
         public void actionPerformed(ActionEvent e) {
 
-            System.out.println(e.getActionCommand());
-
             switch (code) {
                 case 48 -> num0.doClick();
                 case 49 -> num1.doClick();
@@ -223,7 +219,7 @@ public class Calculadora extends JFrame {
                 case 10 -> igual.doClick();
                 case 106 -> multiplicar.doClick();
                 case 111 -> dividir.doClick();
-            }
+                case 46, 110 -> punto.doClick();}
 
         }
     }
@@ -613,6 +609,9 @@ public class Calculadora extends JFrame {
 
         resultadoGrande.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_DIVIDE, 0), "div");
         resultadoGrande.getActionMap().put("div", new KeyPressedMethod(111,KeyEvent.KEY_TYPED));
+
+        resultadoGrande.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_PERIOD, 0), "punto");
+        resultadoGrande.getActionMap().put("punto", new KeyPressedMethod(46,KeyEvent.KEY_TYPED));
 
 
 

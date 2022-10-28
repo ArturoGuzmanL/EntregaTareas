@@ -3,11 +3,11 @@
  */
 
 package org.example;
+
 import javax.swing.*;
 import javax.swing.border.LineBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -41,7 +41,7 @@ public class Procesado extends JFrame {
 
     private void BotonAcercaDe(ActionEvent e) {
         // TODO add your code here
-        String message = "lo que quieras";
+        String message = "Trabajo hecho por Arturo y Carlos";
         String title = "Acerca de";
         JOptionPane.showMessageDialog(this, message, title, JOptionPane.INFORMATION_MESSAGE);
     }
@@ -91,7 +91,7 @@ public class Procesado extends JFrame {
 
             int result = fileChooser.showSaveDialog(this);
             if (result == JFileChooser.APPROVE_OPTION) {
-                fichero = new FileWriter(fileChooser.getSelectedFile().getPath());
+                fichero = new FileWriter(fileChooser.getSelectedFile().getPath()+".txt");
                 fichero.write(textoArchivo.getText());
                 fichero.flush();
                 fichero.close();
@@ -132,6 +132,24 @@ public class Procesado extends JFrame {
 
     }
 
+    private void capitalizacionAction(ActionEvent e) {
+        // TODO add your code here
+        int response = JOptionPane.showOptionDialog(this, "¿Qué tipo de capitalización desea?", "Capitalización", JOptionPane.YES_NO_CANCEL_OPTION, JOptionPane.QUESTION_MESSAGE, null, new String[]{"Pasar todo a mayúsculas", "Pasar todo a minúsculas", "Aplicar Camelcase"}, "Mayúsculas");
+        if (response == 0) {
+            textoArchivo.setText(textoArchivo.getText().toUpperCase());
+        } else if (response == 1) {
+            textoArchivo.setText(textoArchivo.getText().toLowerCase());
+        } else if (response == 2) {
+            textoArchivo.setText(textoArchivo.getText().toLowerCase());
+            String[] palabras = textoArchivo.getText().split(" ");
+            StringBuilder texto = new StringBuilder();
+            for (String palabra : palabras) {
+                texto.append(palabra.substring(0, 1).toUpperCase()).append(palabra.substring(1)).append(" ");
+            }
+            textoArchivo.setText(texto.toString());
+        }
+    }
+
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         menuBar1 = new JMenuBar();
@@ -143,6 +161,7 @@ public class Procesado extends JFrame {
         panel4 = new JPanel();
         salirButton = new JButton();
         estiloButton = new JButton();
+        capitalizacionButton = new JButton();
         acercaDeButton = new JButton();
         textoArchivo = new JTextArea();
         panel1 = new JPanel();
@@ -220,6 +239,14 @@ public class Procesado extends JFrame {
             estiloButton.addActionListener(e -> estiloAction(e));
             menuBar1.add(estiloButton);
 
+            //---- capitalizacionButton ----
+            capitalizacionButton.setText("Capitalizacion");
+            capitalizacionButton.setForeground(Color.white);
+            capitalizacionButton.setBorderPainted(false);
+            capitalizacionButton.setContentAreaFilled(false);
+            capitalizacionButton.addActionListener(e -> capitalizacionAction(e));
+            menuBar1.add(capitalizacionButton);
+
             //---- acercaDeButton ----
             acercaDeButton.setText("Acerca de");
             acercaDeButton.setBorderPainted(false);
@@ -268,6 +295,7 @@ public class Procesado extends JFrame {
     private JPanel panel4;
     private JButton salirButton;
     private JButton estiloButton;
+    private JButton capitalizacionButton;
     private JButton acercaDeButton;
     private JTextArea textoArchivo;
     private JPanel panel1;
