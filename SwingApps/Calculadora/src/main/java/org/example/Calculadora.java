@@ -7,7 +7,10 @@ package org.example;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.io.File;
+import java.security.Key;
 import java.util.ArrayList;
 
 /**
@@ -21,6 +24,9 @@ public class Calculadora extends JFrame {
                 Calculadora ventana = new Calculadora();
                 ventana.setSize(new Dimension(410, 680));
                 ventana.setMinimumSize(new Dimension(300, 590));
+
+
+
                 ventana.setVisible(true);
             }catch (Exception e) {
                 e.printStackTrace();
@@ -32,6 +38,7 @@ public class Calculadora extends JFrame {
         initComponents();
         setContentPane(panelPrincipal);
     }
+
 
     private void buttonAction(ActionEvent e) {
         // TODO add your code here
@@ -75,7 +82,7 @@ public class Calculadora extends JFrame {
                 resultadoMini.setText(
                         "<html>"
                                 + resultadoMiniNoHTML +
-                        "</html>"
+                                "</html>"
                 );
                 resultadoGrande.setText("0");
 
@@ -91,7 +98,7 @@ public class Calculadora extends JFrame {
                 resultadoMini.setText(
                         "<html>"
                                 + resultadoMiniNoHTML +
-                        "</html>"
+                                "</html>"
                 );
                 resultadoGrande.setText("0");
 
@@ -107,7 +114,7 @@ public class Calculadora extends JFrame {
                 resultadoMini.setText(
                         "<html>"
                                 + resultadoMiniNoHTML +
-                        "</html>"
+                                "</html>"
                 );
                 resultadoGrande.setText("");
 
@@ -121,13 +128,13 @@ public class Calculadora extends JFrame {
                 String grandetxt = resultadoGrande.getText();
 
                 resultadoMiniNoHTML = resultadoMiniNoHTML + "\n" + grandetxt + " "
-                                                                 + "<img src=\""
-                                                                 + getClass().getResource("/Images/dividirCalculo.png")
-                                                                 + "\">" + " ";
+                        + "<img src=\""
+                        + getClass().getResource("/Images/dividirCalculo.png")
+                        + "\">" + " ";
                 resultadoMini.setText(
                         "<html>"
                                 + resultadoMiniNoHTML +
-                        "</html>"
+                                "</html>"
                 );
                 resultadoGrande.setText("0");
 
@@ -143,7 +150,7 @@ public class Calculadora extends JFrame {
                 resultadoMini.setText(
                         "<html>"
                                 + resultadoMiniNoHTML +
-                        "</html>"
+                                "</html>"
                 );
                 resultadoGrande.setText("0");
 
@@ -184,12 +191,50 @@ public class Calculadora extends JFrame {
         }
     }
 
+    public class KeyPressedMethod extends AbstractAction{
+        // TODO add your code here
+        private int code;
+        private char key;
+
+        public KeyPressedMethod(int code, int key) {
+            this.code = code;
+            this.key = (char) key;
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+
+            System.out.println(e.getActionCommand());
+
+            switch (code) {
+                case 48 -> num0.doClick();
+                case 49 -> num1.doClick();
+                case 50 -> num2.doClick();
+                case 51 -> num3.doClick();
+                case 52 -> num4.doClick();
+                case 53 -> num5.doClick();
+                case 54 -> num6.doClick();
+                case 55 -> num7.doClick();
+                case 56 -> num8.doClick();
+                case 57 -> num9.doClick();
+                case 8  -> borrar.doClick();
+                case 45, 109 -> restar.doClick();
+                case 521, 107 -> sumar.doClick();
+                case 10 -> igual.doClick();
+                case 106 -> multiplicar.doClick();
+                case 111 -> dividir.doClick();
+            }
+
+        }
+    }
+
     private void initComponents() {
 
         listaNumerosCalculo = new ArrayList<>();
         listaOperacionesCalculo = new ArrayList<>();
         resultadoMiniNoHTML = "";
         reiniciar = false;
+
 
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents  @formatter:off
         frame1 = new JFrame();
@@ -200,7 +245,7 @@ public class Calculadora extends JFrame {
         resultadoMini = new JLabel();
         resultadoGrande = new JLabel();
         panelFila1 = new JPanel();
-        porcentaje = new JButton();
+        vacio_2 = new JButton();
         letraC = new JButton();
         dividir = new JButton();
         borrar = new JButton();
@@ -228,17 +273,20 @@ public class Calculadora extends JFrame {
         //======== frame1 ========
         {
             frame1.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+            frame1.setTitle("Calculadora");
             var frame1ContentPane = frame1.getContentPane();
             frame1ContentPane.setLayout(new BorderLayout());
 
             //======== panelPrincipal ========
             {
                 panelPrincipal.setBackground(new Color(0x1e1e1e));
+                panelPrincipal.setFocusable(false);
                 panelPrincipal.setLayout(new GridLayout(8, 0));
 
                 //======== panelSuperior ========
                 {
                     panelSuperior.setBackground(new Color(0x161616));
+                    panelSuperior.setFocusable(false);
                     panelSuperior.setLayout(new GridLayout(3, 0, 0, -10));
 
                     //---- voidText ----
@@ -246,6 +294,7 @@ public class Calculadora extends JFrame {
                     voidText.setForeground(new Color(0x1e1e1e));
                     voidText.setFont(new Font("Inter", Font.PLAIN, 20));
                     voidText.setHorizontalAlignment(SwingConstants.CENTER);
+                    voidText.setFocusable(false);
                     panelSuperior.add(voidText);
 
                     //---- calcText ----
@@ -253,6 +302,7 @@ public class Calculadora extends JFrame {
                     calcText.setForeground(Color.white);
                     calcText.setFont(new Font("Inter", Font.PLAIN, 20));
                     calcText.setHorizontalAlignment(SwingConstants.CENTER);
+                    calcText.setFocusable(false);
                     panelSuperior.add(calcText);
                 }
                 panelPrincipal.add(panelSuperior);
@@ -262,6 +312,7 @@ public class Calculadora extends JFrame {
                 resultadoMini.setForeground(new Color(0x868a9a));
                 resultadoMini.setFont(new Font("Segoe UI", Font.PLAIN, 16));
                 resultadoMini.setVerticalAlignment(SwingConstants.BOTTOM);
+                resultadoMini.setFocusable(false);
                 panelPrincipal.add(resultadoMini);
 
                 //---- resultadoGrande ----
@@ -276,17 +327,17 @@ public class Calculadora extends JFrame {
                 //======== panelFila1 ========
                 {
                     panelFila1.setBackground(new Color(0x161616));
+                    panelFila1.setFocusable(false);
                     panelFila1.setLayout(new GridLayout(1, 4, 2, 2));
 
-                    //---- porcentaje ----
-                    porcentaje.setText("%");
-                    porcentaje.setBackground(new Color(0x2b3045));
-                    porcentaje.setForeground(Color.white);
-                    porcentaje.setBorder(null);
-                    porcentaje.setFont(new Font("Inter", Font.BOLD, 24));
-                    porcentaje.setActionCommand("Porcentaje");
-                    porcentaje.addActionListener(e -> buttonAction(e));
-                    panelFila1.add(porcentaje);
+                    //---- vacio_2 ----
+                    vacio_2.setBackground(new Color(0x2b3045));
+                    vacio_2.setForeground(Color.white);
+                    vacio_2.setBorder(null);
+                    vacio_2.setFont(new Font("Inter", Font.BOLD, 24));
+                    vacio_2.setActionCommand("Porcentaje");
+                    vacio_2.addActionListener(e -> buttonAction(e));
+                    panelFila1.add(vacio_2);
 
                     //---- letraC ----
                     letraC.setText("C");
@@ -323,6 +374,7 @@ public class Calculadora extends JFrame {
                 //======== panelFila2 ========
                 {
                     panelFila2.setBackground(new Color(0x161616));
+                    panelFila2.setFocusable(false);
                     panelFila2.setLayout(new GridLayout(1, 4, 2, 2));
 
                     //---- num7 ----
@@ -370,6 +422,7 @@ public class Calculadora extends JFrame {
                 //======== panelFila3 ========
                 {
                     panelFila3.setBackground(new Color(0x161616));
+                    panelFila3.setFocusable(false);
                     panelFila3.setLayout(new GridLayout(1, 4, 2, 2));
 
                     //---- num4 ----
@@ -417,6 +470,7 @@ public class Calculadora extends JFrame {
                 //======== panelFila4 ========
                 {
                     panelFila4.setBackground(new Color(0x161616));
+                    panelFila4.setFocusable(false);
                     panelFila4.setLayout(new GridLayout(1, 4, 2, 2));
 
                     //---- num1 ----
@@ -464,6 +518,7 @@ public class Calculadora extends JFrame {
                 //======== panelFila5 ========
                 {
                     panelFila5.setBackground(new Color(0x161616));
+                    panelFila5.setFocusable(false);
                     panelFila5.setLayout(new GridLayout(1, 4, 2, 2));
 
                     //---- vacio ----
@@ -510,12 +565,65 @@ public class Calculadora extends JFrame {
             frame1.setLocationRelativeTo(frame1.getOwner());
         }
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on
+        //region Input Maps - Action Maps
+        resultadoGrande.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_ENTER,0), "enter");
+        resultadoGrande.getActionMap().put("enter", new KeyPressedMethod(10,KeyEvent.KEY_TYPED));
+
+        resultadoGrande.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_1,0), "1");
+        resultadoGrande.getActionMap().put("1", new KeyPressedMethod(49,KeyEvent.KEY_TYPED));
+
+        resultadoGrande.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_2, 0), "2");
+        resultadoGrande.getActionMap().put("2", new KeyPressedMethod(50,KeyEvent.KEY_TYPED));
+
+        resultadoGrande.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_3, 0), "3");
+        resultadoGrande.getActionMap().put("3", new KeyPressedMethod(51,KeyEvent.KEY_TYPED));
+
+        resultadoGrande.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_4, 0), "4");
+        resultadoGrande.getActionMap().put("4", new KeyPressedMethod(52,KeyEvent.KEY_TYPED));
+
+        resultadoGrande.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_5, 0), "5");
+        resultadoGrande.getActionMap().put("5", new KeyPressedMethod(53,KeyEvent.KEY_TYPED));
+
+        resultadoGrande.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_6, 0), "6");
+        resultadoGrande.getActionMap().put("6", new KeyPressedMethod(54,KeyEvent.KEY_TYPED));
+
+        resultadoGrande.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_7, 0), "7");
+        resultadoGrande.getActionMap().put("7", new KeyPressedMethod(55,KeyEvent.KEY_TYPED));
+
+        resultadoGrande.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_8, 0), "8");
+        resultadoGrande.getActionMap().put("8", new KeyPressedMethod(56,KeyEvent.KEY_TYPED));
+
+        resultadoGrande.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_9, 0), "9");
+        resultadoGrande.getActionMap().put("9", new KeyPressedMethod(57,KeyEvent.KEY_TYPED));
+
+        resultadoGrande.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_0, 0), "0");
+        resultadoGrande.getActionMap().put("0", new KeyPressedMethod(48,KeyEvent.KEY_TYPED));
+
+        resultadoGrande.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_BACK_SPACE, 0), "borrar");
+        resultadoGrande.getActionMap().put("borrar", new KeyPressedMethod(8,KeyEvent.KEY_TYPED));
+
+        resultadoGrande.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_PLUS, 0), "suma");
+        resultadoGrande.getActionMap().put("suma", new KeyPressedMethod(521,KeyEvent.KEY_TYPED));
+
+        resultadoGrande.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_MINUS, 0), "resta");
+        resultadoGrande.getActionMap().put("resta", new KeyPressedMethod(45,KeyEvent.KEY_TYPED));
+
+        resultadoGrande.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_MULTIPLY, 0), "multi");
+        resultadoGrande.getActionMap().put("multi", new KeyPressedMethod(106,KeyEvent.KEY_TYPED));
+
+        resultadoGrande.getInputMap(JComponent.WHEN_IN_FOCUSED_WINDOW).put(KeyStroke.getKeyStroke(KeyEvent.VK_DIVIDE, 0), "div");
+        resultadoGrande.getActionMap().put("div", new KeyPressedMethod(111,KeyEvent.KEY_TYPED));
+
+
+
+        //endregion
     }
 
     ArrayList<Float> listaNumerosCalculo;
     ArrayList<Integer> listaOperacionesCalculo;
     String resultadoMiniNoHTML;
     boolean reiniciar;
+    Action buttonAction;
 
     // JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables  @formatter:off
     private JFrame frame1;
@@ -526,7 +634,7 @@ public class Calculadora extends JFrame {
     private JLabel resultadoMini;
     private JLabel resultadoGrande;
     private JPanel panelFila1;
-    private JButton porcentaje;
+    private JButton vacio_2;
     private JButton letraC;
     private JButton dividir;
     private JButton borrar;
