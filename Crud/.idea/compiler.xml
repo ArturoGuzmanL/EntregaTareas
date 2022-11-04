@@ -6,11 +6,10 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ProcesadoArchivos" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="ProcesadoArchivos" target="17" />
+      <module name="javafx-crud" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>

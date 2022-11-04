@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="09ab9db3-fa0f-486a-866e-ee9e2e0d01ed" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Android/Unidad4Casopractico1Comunidades/app/src/main/res/drawable/ic_iconmenu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Android/Unidad4Casopractico1Comunidades/app/src/main/res/menu/example_menu.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/CRUDFX/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/CRUDFX/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/CRUDFX/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/CRUDFX/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/CRUDFX/scripts/comanda_desayunos.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/CRUDFX/src/main/java/controller/Conexion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/CRUDFX/src/main/java/controller/ControllerFecha.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/CRUDFX/src/main/java/controller/PedidoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/CRUDFX/src/main/java/controller/ProductoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/CRUDFX/src/main/java/controller/ResumenDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/CRUDFX/src/main/java/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/CRUDFX/src/main/java/model/Fecha.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/CRUDFX/src/main/java/model/Pedido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/CRUDFX/src/main/java/model/Producto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/CRUDFX/src/main/java/view/View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/JavaFXCRUD/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/JavaFXCRUD/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/JavaFXCRUD/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/JavaFXCRUD/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/JavaFXCRUD/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/JavaFXCRUD/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/JavaFXCRUD/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/JavaFXCRUD/scripts/comanda_desayunos.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/JavaFXCRUD/src/main/java/controller/Conexion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/JavaFXCRUD/src/main/java/controller/ControllerFecha.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/JavaFXCRUD/src/main/java/controller/PedidoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/JavaFXCRUD/src/main/java/controller/ProductoDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/JavaFXCRUD/src/main/java/controller/ResumenDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/JavaFXCRUD/src/main/java/main/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/JavaFXCRUD/src/main/java/model/Fecha.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/JavaFXCRUD/src/main/java/model/Pedido.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/JavaFXCRUD/src/main/java/model/Producto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CRUD JavaFX/JavaFXCRUD/src/main/java/view/View.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/libraries/Maven__com_gluonhq_attach_display_4_0_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/libraries/Maven__com_gluonhq_attach_lifecycle_4_0_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/libraries/Maven__com_gluonhq_attach_statusbar_4_0_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/libraries/Maven__com_gluonhq_attach_storage_4_0_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/libraries/Maven__com_gluonhq_attach_util_4_0_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/libraries/Maven__com_gluonhq_charm_glisten_6_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/libraries/Maven__org_openjfx_javafx_base_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/libraries/Maven__org_openjfx_javafx_base_win_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/libraries/Maven__org_openjfx_javafx_controls_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/libraries/Maven__org_openjfx_javafx_controls_win_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/libraries/Maven__org_openjfx_javafx_fxml_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/libraries/Maven__org_openjfx_javafx_fxml_win_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/libraries/Maven__org_openjfx_javafx_graphics_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/libraries/Maven__org_openjfx_javafx_graphics_win_19.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/JAVAFX CRUD.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/javafx-crud.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/src/main/java/com/gluonapplication/DrawerManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/src/main/java/com/gluonapplication/GluonApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/src/main/java/com/gluonapplication/views/VistaPrimariaPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/src/main/java/com/gluonapplication/views/VistaPrimariaView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/src/main/java/com/gluonapplication/views/VistaSecundariaPresenter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/src/main/java/com/gluonapplication/views/VistaSecundariaView.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/src/main/resources/com/gluonapplication/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/src/main/resources/com/gluonapplication/views/vistaprimaria.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/src/main/resources/com/gluonapplication/views/vistaprimaria.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/src/main/resources/com/gluonapplication/views/vistasecundaria.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/src/main/resources/com/gluonapplication/views/vistasecundaria.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/src/main/resources/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/target/classes/com/gluonapplication/DrawerManager.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/target/classes/com/gluonapplication/GluonApplication.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/target/classes/com/gluonapplication/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/target/classes/com/gluonapplication/views/VistaPrimariaPresenter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/target/classes/com/gluonapplication/views/VistaPrimariaView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/target/classes/com/gluonapplication/views/VistaSecundariaPresenter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/target/classes/com/gluonapplication/views/VistaSecundariaView.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/target/classes/com/gluonapplication/views/vistaprimaria.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/target/classes/com/gluonapplication/views/vistaprimaria.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/target/classes/com/gluonapplication/views/vistasecundaria.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/target/classes/com/gluonapplication/views/vistasecundaria.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/target/classes/icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/JAVAFX CRUD/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/Unidad4Casopractico1Comunidades/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/Unidad4Casopractico1Comunidades/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/Unidad4Casopractico1Comunidades/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/Unidad4Casopractico1Comunidades/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Android/Unidad4Casopractico1Comunidades/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Android/Unidad4Casopractico1Comunidades/app/src/main/res/values/strings.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2H1txOSYiKOkNJoE8faRA2Mphv9" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/guzma/IdeaProjects/EntregaTareas/Crud/JAVAFX CRUD",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "AndroidSdkUpdater"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="GluonApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.gluonapplication.GluonApplication" />
+      <module name="javafx-crud" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gluonapplication.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GluonApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="09ab9db3-fa0f-486a-866e-ee9e2e0d01ed" name="Changes" comment="" />
+      <created>1667464663750</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1667464663750</updated>
+      <workItem from="1667464666846" duration="408000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>

@@ -1,0 +1,63 @@
+.table-view .column-header#clienteColumn .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+#tablaView {
+    -fx-background-color: #4fc3a1;
+}
+.table-view .column-header#fechaColumn .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+.table-view .column-header#productosColumn .label {
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+#clienteColumn {
+    -fx-alignment: CENTER;
+    -fx-background-color: #324960;
+    -fx-border-color: #efeeee;
+    -fx-text-fill: white;
+    -fx-border-width: 0.2px
+}
+
+#clienteColumn:empty {
+    -fx-border-width: 0px;
+}
+
+#productosColumn{
+    -fx-alignment: CENTER;
+    -fx-background-color: #4fc3a1;
+    -fx-border-color: #efeeee;
+    -fx-text-fill: black;
+    -fx-border-width: 0.2px
+}
+
+#productosColumn:empty {
+    -fx-border-width: 0px;
+}
+
+#fechaColumn {
+    -fx-alignment: CENTER;
+    -fx-background-color: #324960;
+    -fx-border-color: #efeeee;
+    -fx-text-fill: white;
+    -fx-border-width: 0.2px
+}
+
+#fechaColumn:empty {
+    -fx-border-width: 0px;
+}
+
+#estadoColumn {
+    -fx-alignment: CENTER;
+    -fx-background-color: #4fc3a1;
+    -fx-border-color: #efeeee;
+    -fx-text-fill: black;
+    -fx-border-width: 0.2px
+}
+
+#estadoColumn:empty {
+    -fx-border-width: 0px;
+}
