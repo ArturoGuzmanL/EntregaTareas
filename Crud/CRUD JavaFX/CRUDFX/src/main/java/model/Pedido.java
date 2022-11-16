@@ -1,9 +1,13 @@
 package model;
 
 import java.sql.Date;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicReference;
 
+import static controller.PedidoDAO.obtenerAllIdentificacion;
 import static view.View.clean;
 import static view.View.cleanDot;
 
@@ -26,6 +30,28 @@ public class Pedido {
 
     //Listado de los Productos elegidos
     private HashMap<Producto, Integer> productos;
+
+    public Pedido() {
+    }
+    public Pedido(Date fecha, String cliente, String estado, HashMap<Producto, Integer> productos) {
+        this.fecha = fecha;
+        this.cliente = cliente;
+        this.estado = estado;
+        this.productos = productos;
+        try {
+            ArrayList<Integer> identificaciones = obtenerAllIdentificacion();
+            Integer max;
+
+            if (!identificaciones.isEmpty()) {
+                max = Collections.max(identificaciones);
+            } else {
+                max = 0;
+            }
+            this.identificacion = max + 1;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     public Integer getIdentificacion() {
         return identificacion;
@@ -65,14 +91,18 @@ public class Pedido {
 
     public String getProductos() {
         StringBuilder s = new StringBuilder();
+        ArrayList<String> lista = new ArrayList<>();
 
         for (int i = 0; i < productos.size(); i++) {
-            s.append(productos.keySet().toArray()[i]).append(" x").append(productos.values().toArray()[i]);
-            if (i != productos.size() - 1) {
-                s.append("\n");
-            }
+            lista.add(productos.keySet().toArray()[i] + " x " + productos.values().toArray()[i] + "\n");
         }
-        return s.toString();
+        lista.sort(String::compareTo);
+
+        String finalS = "";
+        for (int i = 0; i < lista.size(); i++) {
+            finalS += lista.get(i);
+        }
+        return finalS;
     }
 
     public void setProductos(HashMap<Producto, Integer> producto) {

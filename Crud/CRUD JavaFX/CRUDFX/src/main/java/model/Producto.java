@@ -1,7 +1,9 @@
 package model;
 
 
-import static controller.ProductoDAO.leerTipo;
+import controller.ProductoDAO;
+
+import static controller.ProductoDAO.*;
 
 /**
  * Objeto que guarda las opciones dentro de la carta. Así, el usuario puede seleccionarla y pedirla para su disfrute
@@ -73,6 +75,15 @@ public class Producto {
     }
 
     /**
+     *
+     */
+    public Producto productoDialog(int idProducto) {
+        Producto producto = new Producto();
+        producto = ProductoDAO.infoProducto(idProducto);
+        return producto;
+    }
+
+    /**
      * Formato User-Friendly para poder mostrar un producto al usuario
      *
      * @return La id del producto, el nombre y el precio guardados
@@ -80,6 +91,5 @@ public class Producto {
     public String cartaView() {
         return id + " || " + nombre + " --> " + precio + " €";
     }
-
 
 }

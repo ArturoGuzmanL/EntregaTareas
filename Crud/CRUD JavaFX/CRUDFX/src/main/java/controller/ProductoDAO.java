@@ -24,7 +24,7 @@ public class ProductoDAO {
      * @param id_producto Id unico del producto
      * @return Objeto Pedido con la informacion guardada en la base de Datos
      */
-    static Producto infoProducto(Integer id_producto) {
+    public static Producto infoProducto(Integer id_producto) {
         Producto prod = new Producto();
 
         String sql_query = "SELECT * FROM comanda_desayunos.carta WHERE id=?;";

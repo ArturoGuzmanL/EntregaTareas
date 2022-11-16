@@ -4,6 +4,7 @@ import model.Fecha;
 import model.Pedido;
 import model.Producto;
 
+import java.security.ProtectionDomain;
 import java.sql.*;
 import java.util.Date;
 import java.util.*;
@@ -58,7 +59,7 @@ public class PedidoDAO {
      * <li><i>False</i>: Si ha habido un error a la hora de crear el pedido</li>
      * </ul>
      */
-    static boolean insertarPedido(Pedido pedido) {
+    public static boolean insertarPedido(Pedido pedido) {
 
         boolean finalizado = false;
         String sql_query = "INSERT INTO pedido (fecha,cliente,estado,producto,identificador,cantidad) VALUES (?,?,?,?,?,?);";
@@ -218,7 +219,7 @@ public class PedidoDAO {
     /**
      * Permite eliminar un pedido siempre que este ya se haya realizado
      */
-    static boolean eliminarPedido(Integer identificador) {
+    public static boolean eliminarPedido(Integer identificador) {
         boolean finalizado = false;
         String sql_query = "DELETE FROM pedido WHERE identificador=?";
         try (PreparedStatement pst = con.prepareStatement(sql_query);) {
@@ -538,7 +539,7 @@ public class PedidoDAO {
      *
      * @return Listado de las distintas identificaciones
      */
-    static ArrayList<Integer> obtenerAllIdentificacion() throws Exception {
+    public static ArrayList<Integer> obtenerAllIdentificacion() throws Exception {
         ArrayList<Integer> todas_identificaciones = new ArrayList<>();
         String sql_query = "SELECT DISTINCT identificador FROM comanda_desayunos.pedido;";
         try (PreparedStatement pst = con.prepareStatement(sql_query)) {
@@ -574,5 +575,17 @@ public class PedidoDAO {
         }
 
         return listado_pedidos;
+    }
+
+    public static void editarPedido(Pedido editPedido) {
+      String sql_query = "DELETE FROM pedido WHERE identificador=?";
+        try (PreparedStatement pst = con.prepareStatement(sql_query)) {
+            pst.setInt(1, editPedido.getIdentificacion());
+            pst.executeUpdate();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        insertarPedido(editPedido);
+
     }
 }
