@@ -130,6 +130,7 @@
     -fx-border-width: 0px;
 }
 */
+
 #textoTop {
     -fx-text-fill: white;
     -fx-font-weight: bold;
@@ -179,6 +180,73 @@
     -fx-background-color: #324960;
     -fx-pref-height: 5;
     -fx-border-color: null;
+}
+
+/* AddDialog CSS */
+
+#dialogPrincipalDatos {
+    -fx-background-color: #4fc3a1;
+}
+
+#datosDialogText {
+    -fx-text-alignment: center;
+    -fx-background-color: #4fc3a1;
+    -fx-font-weight: bold;
+    -fx-border-color: #324960;
+    -fx-border-width: 0 0 2 0;
+}
+
+#dialogPrincipalDatos .header-panel .label {
+    -fx-font-size: 1.167em; /* 14px */
+    -fx-font-weight: bold;
+    -fx-background-color: #4fc3a1;
+    -fx-alignment: CENTER;
+    -fx-text-fill: #324960;
+}
+
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #4fc3a1;
+}
+
+.tab {
+    -fx-background-color: #4fc3a1;
+    -fx-border-color: #324960;
+    -fx-font-weight: bold;
+}
+
+.tab:selected {
+    -fx-background-color: #324960;
+    -fx-border-color: #4fc3a1;
+    -fx-font-weight: bold;
+    -fx-text-base-color: #4fc3a1;
+}
+
+#panaderiaChartX {
+    -fx-font-weight: bold;
+}
+
+#panaderiaChartY {
+    -fx-font-weight: bold;
+}
+
+.axis{
+    -fx-tick-label-font-size: 1em;
+    -fx-font-weight: bold;
+}
+
+.chart-bar {
+    -fx-bar-fill: #324960;
+}
+
+.chart-plot-background {
+    -fx-background-color: #4fc3a1;
+}
+
+.chart-vertical-grid-lines {
+    -fx-stroke: #ffffff;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: #ffffff;
 }
 
 /* AlertDialog CSS */

@@ -1,5 +1,7 @@
 package model;
 
+import javafx.scene.control.Button;
+
 import java.sql.Date;
 import java.time.LocalDate;
 import java.util.ArrayList;

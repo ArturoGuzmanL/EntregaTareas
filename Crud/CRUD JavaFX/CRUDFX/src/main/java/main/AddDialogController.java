@@ -4,18 +4,18 @@ import controller.ProductoDAO;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import model.Pedido;
 import model.Producto;
 
 import java.net.URL;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.ResourceBundle;
 
-public class AddDialogViewController implements Initializable {
+public class AddDialogController implements Initializable {
 
     @FXML
     private Text fechaText;
@@ -79,6 +79,14 @@ public class AddDialogViewController implements Initializable {
     private Separator separator1;
     @FXML
     private Separator separator2;
+    @FXML
+    private DialogPane dialogAddDialog;
+    @FXML
+    private GridPane gridAddDialogPrincipal;
+    @FXML
+    private Separator separator21;
+    @FXML
+    private Separator separator11;
 
 
     @Override
