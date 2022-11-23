@@ -7,6 +7,12 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Trabajo realizado por:
+ * Carlos Aragón García
+ * Arturo Guzmán Lucena
+ */
+
 public class PrincipalApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {

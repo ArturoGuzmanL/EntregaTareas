@@ -75,6 +75,8 @@ public class PrincipalController implements Initializable {
     private Button editarButton;
     @FXML
     private Button datosButton;
+    @FXML
+    private Button acercaDeButton;
 
     @FXML
     public void comandasButtonOnAction(ActionEvent event) {
@@ -140,6 +142,23 @@ public class PrincipalController implements Initializable {
         } else {
             toastMessage("", -1);
         }
+    }
+
+    @FXML
+    public void acercaDeButtonOnAction() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Acerca de");
+        alert.setHeaderText("Trabajo realizado por:");
+        alert.setContentText("Arturo Guzmán Lucena y Carlos Aragón García");
+        alert.setResizable(false);
+
+        DialogPane alerta = alert.getDialogPane();
+        alerta.getStylesheets().add(PrincipalApplication.class.getResource("/PrincipalCSS.css").toExternalForm());
+        alerta.getStyleClass().add("alertaDialog");
+
+        ButtonBar buttonBar = (ButtonBar)alert.getDialogPane().lookup(".button-bar");
+        buttonBar.getButtons().get(0).setStyle("-fx-background-color: #5ac8ea; -fx-text-fill: black; -fx-border-color: black; -fx-border-width: 1px;");
+        alert.showAndWait();
     }
 
     @FXML
