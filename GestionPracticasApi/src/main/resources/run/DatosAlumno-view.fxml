@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<DialogPane fx:id="dialogPaneDatosAlumno" prefHeight="841.0" prefWidth="1319.0" stylesheets="@PrincipalCSS.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="run.DatosAlumnoController">
+   <content>
+      <BorderPane stylesheets="@PrincipalCSS.css">
+         <center>
+            <GridPane fx:id="gridPaneDatosAlumno" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="731.0" prefWidth="1239.0" stylesheets="@PrincipalCSS.css">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <GridPane>
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text fx:id="textHorasRestFCTDatosAlumno" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Horas restantes en FCT:" wrappingWidth="168.5742530822754" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="textHorasRealiFCTDatosAlumno" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Horas realizadas en FCT:" wrappingWidth="176.5742530822754" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="textHorasRestResultFCTDatosAlumno" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Horas restantes" wrappingWidth="168.5742530822754" GridPane.columnIndex="1">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="textHorasRealiResultFCTDatosAlumno" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Horas restantes" wrappingWidth="168.5742530822754" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Separator fx:id="separator11" prefHeight="25.0" prefWidth="200.0" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                        <Separator fx:id="separator111" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                        <Separator fx:id="separator1111" orientation="VERTICAL" prefHeight="200.0" prefWidth="25.0" GridPane.columnIndex="1" GridPane.halignment="RIGHT" />
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text fx:id="textHorasRealiResultDUALDatosAlumno" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Actividad:" wrappingWidth="73.57425308227539" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="textHorasRestResultDUALDatosAlumno" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Actividad:" wrappingWidth="73.57425308227539" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="textHorasRestDUALDatosAlumno" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Horas restantes en DUAL:" wrappingWidth="184.5742530822754">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="textHorasRealiDUALDatosAlumno" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Horas realizadas en DUAL:" wrappingWidth="191.5742530822754" GridPane.rowIndex="1">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Separator fx:id="separator112" prefHeight="25.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                        <Separator fx:id="separator1121" prefHeight="25.0" prefWidth="200.0" GridPane.rowIndex="1" GridPane.valignment="BOTTOM" />
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text fx:id="textInformacionTutor" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Información del tutor" wrappingWidth="154.5742530822754" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <GridPane GridPane.rowIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text fx:id="textTutorNombre" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre:" wrappingWidth="66.57425308227539" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textTutorNombreResult" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Informacion" wrappingWidth="112.57425308227539" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textTutorCorreo" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo:" wrappingWidth="66.57425308227539" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textTutorCorreoResult" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Informacion" wrappingWidth="112.57425308227539" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Text fx:id="textInformacionEmpresa" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Información de [Empresa]" wrappingWidth="192.5742530822754" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <GridPane GridPane.rowIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Text fx:id="textCorreo" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Correo:" wrappingWidth="66.57425308227539" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textResponsable" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Responsable:" wrappingWidth="92.57425308227539" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textNumTelf" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Número de teléfono" wrappingWidth="139.5742530822754" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textCorreoResult" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Informacion" wrappingWidth="112.57425308227539" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textResponsableResult" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Informacion" wrappingWidth="112.57425308227539" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="textNumTelfResult" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Informacion" wrappingWidth="112.57425308227539" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </GridPane>
+                     </children>
+                  </GridPane>
+               </children>
+               <opaqueInsets>
+                  <Insets left="10.0" right="10.0" top="10.0" />
+               </opaqueInsets>
+            </GridPane>
+         </center>
+         <top>
+            <Region fx:id="regionBorderDatos1" prefHeight="4.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </top>
+         <left>
+            <Region fx:id="regionBorderDatos4" prefHeight="200.0" prefWidth="4.0" BorderPane.alignment="CENTER" />
+         </left>
+         <right>
+            <Region fx:id="regionBorderDatos2" prefHeight="200.0" prefWidth="4.0" BorderPane.alignment="CENTER" />
+         </right>
+         <bottom>
+            <Region fx:id="regionBorderDatos3" prefHeight="4.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+         </bottom>
+      </BorderPane>
+   </content>
+   <buttonTypes>
+      <ButtonType fx:constant="CLOSE" />
+   </buttonTypes>
+</DialogPane>

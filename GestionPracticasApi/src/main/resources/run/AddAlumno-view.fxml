@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<DialogPane fx:id="dialogPaneAddTarea" prefHeight="462.0" prefWidth="613.0" stylesheets="@PrincipalCSS.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="run.AddAlumnoController">
+   <buttonTypes>
+      <ButtonType fx:constant="CANCEL" />
+      <ButtonType fx:constant="OK" />
+   </buttonTypes>
+   <content>
+      <BorderPane fx:id="borderPaneAddTarea" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0">
+         <center>
+            <GridPane fx:id="gridPaneAddTarea" prefHeight="380.0" prefWidth="579.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.0" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0" prefWidth="159.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="102.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="218.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="123.0" minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="179.0" minHeight="10.0" prefHeight="60.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="225.0" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="225.0" minHeight="10.0" prefHeight="124.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="231.0" minHeight="10.0" prefHeight="110.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <DatePicker fx:id="fechaNacimiento" prefHeight="26.0" prefWidth="244.0" showWeekNumbers="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin></DatePicker>
+                  <Text fx:id="textActividadAddTarea" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Nombre" wrappingWidth="53.57425308227539" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textObservAddTarea" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Apellidos" wrappingWidth="63.57425308227539" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="nombre" prefHeight="26.0" prefWidth="194.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin></TextField>
+                  <TextField fx:id="apellidos" prefHeight="26.0" prefWidth="194.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                  <Text fx:id="textFechaAddTarea" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Fecha Nacimiento" wrappingWidth="74.57425308227539" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textHorasAddTarea" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefono" wrappingWidth="55.57425308227539" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="telefono" prefHeight="14.0" prefWidth="118.0" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <GridPane.margin>
+                        <Insets right="100.0" />
+                     </GridPane.margin></TextField>
+                  <Text fx:id="textActividadAddTarea1" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="DNI" wrappingWidth="25.57425308227539" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="dni" prefHeight="26.0" prefWidth="194.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets right="20.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <GridPane GridPane.rowIndex="4">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="101.0" minWidth="10.0" prefWidth="57.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="106.0" minHeight="10.0" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="162.0" minHeight="10.0" prefHeight="48.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <GridPane GridPane.rowIndex="1">
+                           <rowConstraints>
+                              <RowConstraints />
+                           </rowConstraints>
+                           <columnConstraints>
+                              <ColumnConstraints />
+                           </columnConstraints>
+                        </GridPane>
+                        <Text fx:id="horasFCTText" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Horas FCT" wrappingWidth="64.57425308227539" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets bottom="5.0" />
+                           </GridPane.margin>
+                        </Text>
+                        <Text fx:id="horasDUALTxt" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Horas DUAL" wrappingWidth="75.57425308227539" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <GridPane.margin>
+                              <Insets top="5.0" />
+                           </GridPane.margin>
+                        </Text>
+                     </children>
+                  </GridPane>
+                  <GridPane GridPane.columnIndex="1" GridPane.rowIndex="4">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints maxHeight="105.0" minHeight="10.0" prefHeight="54.399951171875" vgrow="SOMETIMES" />
+                      <RowConstraints maxHeight="133.0" minHeight="10.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <GridPane GridPane.rowIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="58.0" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="30.0" minHeight="10.0" prefHeight="13.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                        </GridPane>
+                        <TextField fx:id="horasFCT" prefHeight="26.0" prefWidth="108.0">
+                           <GridPane.margin>
+                              <Insets right="50.0" />
+                           </GridPane.margin>
+                        </TextField>
+                        <TextField fx:id="horasDUAL" prefHeight="26.0" prefWidth="194.0" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets right="50.0" />
+                           </GridPane.margin>
+                        </TextField>
+                     </children>
+                  </GridPane>
+                  <Text fx:id="textTipoAddTarea2" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Observaciones" wrappingWidth="91.57425308227539" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets bottom="33.0" left="33.0" right="50.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <TextArea fx:id="textObservaciones" prefHeight="143.0" prefRowCount="20" prefWidth="218.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                  <Text fx:id="textTipoAddTarea11" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" wrappingWidth="36.57425308227539" GridPane.halignment="CENTER" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets top="25.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <TextField fx:id="email" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="256.0" GridPane.columnIndex="1" GridPane.rowIndex="3" GridPane.valignment="TOP">
+                     <GridPane.margin>
+                        <Insets top="25.0" />
+                     </GridPane.margin>
+                  </TextField>
+                  <Text fx:id="textActividadAddTarea3" fill="#a0a2ab" strokeType="OUTSIDE" strokeWidth="0.0" text="Empresa" wrappingWidth="53.57425308227539" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets top="5.0" />
+                     </GridPane.margin>
+                  </Text>
+                  <ComboBox fx:id="empresaComboBox" prefHeight="25.0" prefWidth="119.0" GridPane.columnIndex="3" GridPane.rowIndex="2" GridPane.valignment="TOP" />
+               </children>
+            </GridPane>
+         </center>
+      </BorderPane>
+   </content>
+</DialogPane>

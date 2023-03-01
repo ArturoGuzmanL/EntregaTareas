@@ -1,0 +1,221 @@
+#mainAnchorLogin {
+    -fx-background-color: #2D3447;
+}
+
+#buttonProfesorLogin, #buttonAlumnoLogin {
+    -fx-background-color: #151928;
+}
+
+#buttonProfesorLogin:pressed, #buttonAlumnoLogin:pressed {
+    -fx-background-color: #262b38;
+}
+
+#textFieldMail, #textFieldPassword {
+    -fx-background-color: #242a3b;
+    -fx-text-fill: #a0a2ab;
+}
+
+#buttonIniciarSesion {
+    -fx-background-color: #3C58FA;
+}
+
+#buttonIniciarSesion:pressed {
+    -fx-background-color: #7484ff;
+}
+
+#regionDragMouse, #regionButtonBar {
+    -fx-background-color: #464f60;
+}
+
+#RegionBorder1, #RegionBorder2, #RegionBorder3, #RegionBorder4 {
+    -fx-background-color: #2D3447;
+}
+
+#regionBorderDatos1, #regionBorderDatos2, #regionBorderDatos3, #regionBorderDatos4 {
+    -fx-background-color: #464f60;
+}
+
+
+.table-view {
+    -fx-padding: -1;
+    -fx-background-color: #2D3447;
+    -fx-border-color: #2D3447;
+    -fx-selection-bar-non-focused: rgba(50, 73, 96, 0.7);
+}
+
+.table-view .column-header {
+    -fx-background-color: #2d333f;
+    -fx-font-weight: bold;
+    -fx-text-alignment: center;
+}
+
+.table-view .column-header-background .label {
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+#toolbarMain, #toolbarMain1 {
+    -fx-background-color: #2d333f;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: black;
+}
+
+#toolbarMain .button, #toolbarMain1 .button {
+    -fx-background-color: #3C58FA;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+}
+
+#toolbarMain .button:pressed, #toolbarMain1 .button:pressed {
+    -fx-background-color: #7484ff;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+}
+
+#textoTop {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-color: #2d333f;
+    -fx-border-color: #2d333f;
+    -fx-border-width: 2;
+}
+
+.separator .line {
+    -fx-background-color: #324960;
+    -fx-pref-height: 5;
+    -fx-border-color: null;
+}
+
+.table-view .scroll-bar * {
+    -fx-min-width: 0;
+    -fx-pref-width: 0;
+    -fx-max-width: 0;
+
+    -fx-min-height: 0;
+    -fx-pref-height: 0;
+    -fx-max-height: 0;
+}
+
+#text, #textoFecha {
+    -fx-fill: white;
+}
+
+.table-view .table-row-cell {
+    -fx-background-color: #464f60;
+    -fx-alignment: CENTER;
+    -fx-text-alignment: center;
+    -fx-border-color: #a0a2ab;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-border-width: 0.15px
+}
+
+.table-view .table-row-cell:empty {
+    -fx-border-width: 0px;
+}
+
+.table-view .table-cell {
+    -fx-border-color: #a0a2ab;
+    -fx-border-width: 0.15px;
+    -fx-text-fill: white;
+}
+
+.table-view .table-cell:empty {
+    -fx-border-width: 0px;
+}
+
+.table-view .table-row-cell:selected {
+    -fx-background-color: #293c4f;
+}
+
+.table-view .table-row-cell:empty {
+    -fx-border-width: 0px;
+}
+
+/* ADDTAREAALUMNO */
+
+#dialogPaneAddTarea {
+    -fx-background-color: #2D3447;
+    -fx-padding: 10;
+    -fx-border-width: 4;
+    -fx-border-color: #324960;
+}
+
+#borderPaneAddTarea, #gridPaneAddTarea {
+    -fx-background-color: #2D3447;
+}
+
+/* DATOSALUMNO */
+
+#gridPaneDatosAlumno, #gridPaneDatosProfesor, #gridPane2DatosProfesor {
+    -fx-background-color: #2D3447;
+}
+
+#dialogPaneDatosAlumno, #dialogPaneDatosProfesor {
+    -fx-background-color: #2D3447;
+    -fx-padding: 22;
+    -fx-border-width: 4;
+    -fx-border-color: #324960;
+}
+
+/* TABLAPROFESOR */
+
+#tabPaneProfesor .tab-header-area .tab-header-background {
+    -fx-background-color: #2D3447;
+    -fx-border-color: #464f60;
+    -fx-border-width: 4.5;
+}
+
+#tabPaneProfesor .tab {
+    -fx-background-color: #2d333f;
+    -fx-border-width: 2 15 2 2;
+    -fx-border-color: #2D3447;
+    -fx-font-weight: bold;
+}
+
+#tabPaneProfesor .tab-label {
+    -fx-text-fill: white;
+    -fx-border-color: #324960;
+    -fx-border-width: 0 0 2 0;
+}
+
+/* AlertDialog CSS */
+
+.alertaDialog {
+    -fx-background-color: #2D3447;
+    -fx-border-width: 4;
+    -fx-border-color: #324960;
+}
+
+.alertaDialog > *.button-bar > *.container {
+    -fx-background-color: #2D3447;
+}
+
+.alertaDialog > *.label.content {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #a0a2ab;
+}
+
+.alertaDialog > *.header-panel {
+    -fx-background-color: #2D3447;
+}
+
+.alertaDialog > *.header-panel > *.label {
+    -fx-font-size: 18px;
+    -fx-font-style: italic;
+    -fx-wrap-text: true;
+    -fx-text-fill: #a0a2ab;
+}
+
+#cerrarSesionButtonBar, #profesorButtonBar, #empresaButtonBar {
+    -fx-background-color: #2d333f;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-color: black;
+}
+
+#cerrarSesionButtonBar .button, #profesorButtonBar .button, #empresaButtonBar .button {
+    -fx-background-color: #3C58FA;
+    -fx-text-fill: white;
+    -fx-background-radius: 5;
+}
